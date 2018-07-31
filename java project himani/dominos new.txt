@@ -1,0 +1,904 @@
+
+import java.io.*;
+public class Dominos
+{
+    InputStreamReader isr=new InputStreamReader(System.in);
+    BufferedReader br=new BufferedReader(isr);
+    String name_1 , add ,id;
+    long ph; int select,b,cont,pizz,pizz_1,cat,choice,choice_1,choice1,ncat,yes,no,sid,dri;
+    Dominos()
+    {String name_1 , add ,id="";
+        long ph=0; int select,b,cont,pizz,pizz_1,cat,choice,choice_1,choice1,yes,no,ncat,sid,dri=0;
+    }
+
+    public  void input() throws IOException
+    {
+
+        System.out.println("Enter Your Name");
+        name_1=br.readLine();
+        System.out.println("Enter Your Mobile Number");
+        ph=Integer.parseInt(br.readLine());
+        System.out.println("Enter Your Address");
+        add=br.readLine();
+        System.out.println("Enter Your Email-Id");
+        id=br.readLine();
+    }
+
+    public  void display() throws IOException
+    {
+        System.out.println("\f________________________________________________________________");
+        System.out.println("........................WELCOME TO DOMINOS.......................");
+        System.out.println("________________________________________________________________");
+        System.out.println("                      DOMINOS: KUSHION KA TIME!     ");
+        System.out.println("_________________________________________________________________");
+        System.out.println("\f ########## SELECT  YOUR MENU #########\n");
+        for(int l=0;l==b;l++)
+        {
+            while(true)
+            {
+                try
+                {
+                    System.out.println("           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    System.out.println("           @    1.PIZZA    2.SIDES     @");
+                    System.out.println("           @    3.DESSERTS 4.DIPS      @");
+                    System.out.println("           @         5.QUERIES         @");
+                    System.out.println("           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    select=Integer.parseInt(br.readLine());
+                }
+                catch(Exception ex)
+                {
+                    System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                    br.readLine();
+                    continue;
+                } 
+                if(select==1||select==2 || select==3 ||select==4 )
+                {
+                    break;
+                }
+                else
+                {
+                    System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                    br.readLine();
+                }
+            }
+            switch(select)
+            {
+                case 1:
+                System.out.println("\f         ****************************************");
+                System.out.println("              ----YOU HAVE SELECTED PIZZA----");
+                System.out.println("         ****************************************");
+                System.out.println("\n         ##########SELECT YOUR CHOICE#############");
+                while(true)
+                {
+                    try
+                    {
+                        System.out.println("         #  1.PIZZAS  2.GO BACK TO THE MENU      #");
+                        System.out.println("         #########################################");
+                        choice=Integer.parseInt(br.readLine());
+                    }
+                    catch(Exception ex)
+                    {
+                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                        continue;
+                    } 
+                    if(choice==1||choice==2  )
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                    }
+                }
+
+                switch (choice)
+                {
+                    case 1:
+                    System.out.println("\f");
+                    System.out.println("=================================================");
+                    System.out.println("=             YOU HAVE SELECTED PIZZAS          =");
+                    System.out.println("=            SELECT YOUR CHOICE OF PIZZAS       =");
+                    System.out.println("=================================================");
+                    while(true)
+                    {
+                        try
+                        {
+                            System.out.println("======================================");
+                            System.out.println("=         SELECT VEG/NONVEG          = ");
+                            System.out.println("=         1.VEG  2.NONVEG            =");
+                            System.out.println("======================================");
+                            choice1=Integer.parseInt(br.readLine());
+                        }
+                        catch(Exception ex)
+                        {
+                            System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                            continue;
+                        } 
+                        if(choice1==1||choice1==2  )
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                        }
+                    }
+                    switch(choice1)
+                    {
+                        case 1:
+
+                        while(true)
+                        {   try
+                            {
+                                System.out.println("\f     --------------------------------------------");
+                                System.out.println("                  YOU HAVE SELECTED VEG");
+                                System.out.println("      1.CHEESEBURST PIZZA  2.Classic Hand Tossed");
+                                choice_1=Integer.parseInt(br.readLine());
+                            }
+                            catch(Exception ex)
+                            {
+                                System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                br.readLine();
+                                continue;
+                            } 
+                            if(choice_1==1||choice_1==2  )
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                br.readLine();
+                            }
+                        }
+                        switch(choice_1)
+                        {
+                            case 1:
+                            while(true)
+                            {   try
+                                {
+                                    System.out.println("\f");
+                                    System.out.println("           /-------------------------------------\\");
+                                    System.out.println("           |              CheeseBurst              |");
+                                    System.out.println("           |                Pizza                  |");
+                                    System.out.println("           |---------------------------------------|");
+                                    System.out.println("           |Category           Small  Medium  Large|");
+                                    System.out.println("           |1. (Veg Treat)      90     150     250 |");
+                                    System.out.println("           |1.Spicy veg                            |");
+                                    System.out.println("           |2.Freash Veggie                        |");
+                                    System.out.println("           |3.Farm House                           |        ");
+                                    System.out.println("           |4.Country Special                      |      ");
+                                    System.out.println("           |---------------------------------------|");
+                                    System.out.println("           |2.(Veg Special)     150    250     310 |           ");
+                                    System.out.println("           |5.Peppy Paneer                         |");
+                                    System.out.println("           |6.Gourmet                              | ");
+                                    System.out.println("           |7.Dulex Veggie                         |  ");
+                                    System.out.println("           \\--------------------------------------/");
+                                    System.out.println("\n Select pizza category \n 1.(Veg Treat) 2.(Veg Special)");
+                                    pizz=Integer.parseInt(br.readLine());
+                                }
+                                catch(Exception ex)
+                                {
+                                    System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                    continue;
+                                } 
+                                if(pizz==1||pizz==2 )
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                }
+                            }
+                            switch (pizz)
+                            {
+                                case 1:
+                                System.out.println("Y O U      H A V E    S E L E C T E D ");
+                                System.out.println("    V E G   S P E C I A L  ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("  Now Select Pizza in this category");
+                                        cat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(cat==1||cat==2|| cat==3||cat==4 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(cat==1)
+                                {
+                                    System.out.println("You have selected Spicy Veg");
+                                }
+                                else if(cat==2)
+                                {
+                                    System.out.println("You have selected Freash Veggie");
+                                }
+                                else if(cat==3)
+                                {
+                                    System.out.println("You have selected Farmhouse");
+                                }
+                                else if(cat==4)
+                                {
+                                    System.out.println("You have selected Country Special");
+                                }
+                                break;
+                                case 2:
+                                System.out.println("Y O U      H A V E    S E L E C T E D ");
+                                System.out.println(" V E G   S P E C I A L  ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("\n");
+                                        System.out.println("Now Select Pizza in this category");
+                                        cat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(cat==5||cat==6|| cat==7 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(cat==5)
+                                {
+                                    System.out.println("You have selected Peepy Paneer");
+                                }
+                                else if(cat==5)
+                                {
+                                    System.out.println("You have selected Gourmeet");
+                                }
+                                else if(cat==5)
+                                {
+                                    System.out.println("You have selected Dulex Veggie");
+                                }
+                                break;
+                            }
+                            break;
+                            case 2:
+                            while(true)
+                            {   try
+                                {
+                                    System.out.println("\f");
+                                    System.out.println("            /-------------------------------------\\");
+                                    System.out.println("            |         Classic Hand Tossed           |");
+                                    System.out.println("            |                Pizza                  |");
+                                    System.out.println("            |---------------------------------------|");
+                                    System.out.println("            |Category           Small  Medium  Large|");
+                                    System.out.println("            |1. (Veg Treat)      140    250     310 |");
+                                    System.out.println("            |1.Spicy veg                            |");
+                                    System.out.println("            |2.Freash Veggie                        |          ");
+                                    System.out.println("            |3.Farm House                           |        ");
+                                    System.out.println("            |4.Country Special                      |      ");
+                                    System.out.println("            |---------------------------------------|");
+                                    System.out.println("            |2.(Veg Special)     210    290     330 |           ");
+                                    System.out.println("            |5.Peppy Paneer                         |");
+                                    System.out.println("            |6.Gourmet                              | ");
+                                    System.out.println("            |7.Dulex Veggie                         |  ");
+                                    System.out.println("            \\--------------------------------------/");
+                                    System.out.println("\n Select pizza category \n 1.(Veg Treat) 2.(Veg Special)");
+                                    pizz=Integer.parseInt(br.readLine());
+                                }
+                                catch(Exception ex)
+                                {
+                                    System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                    continue;
+                                } 
+                                if(pizz==1||pizz==2 )
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                }
+                            }
+                            switch (pizz)
+                            {
+                                case 1:
+                                System.out.println("      Y O U    H A V E   S E L E C T E D");
+                                System.out.println("           V E G     T R E A T  ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("Now Select Pizza in this category");
+                                        cat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(cat==1||cat==2|| cat==3||cat==4 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(cat==1)
+                                {
+                                    System.out.println("You have selected Spicy Veg");
+                                }
+                                else if(cat==2)
+                                {
+                                    System.out.println("You have selected Freash Veggie");
+                                }
+                                else if(cat==3)
+                                {
+                                    System.out.println("You have selected Farmhouse");
+                                }
+                                else if(cat==4)
+                                {
+                                    System.out.println("You have selected Country Special");
+                                }
+                                break;
+                                case 2:
+                                System.out.println("      Y O U    H A V E   S E L E C T E D");
+                                System.out.println("           V E G     S P E C I A L  ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("Now Select Pizza in this category");
+                                        cat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(cat==5||cat==6|| cat==7 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(cat==5)
+                                {
+                                    System.out.println("You have selected Peepy Paneer");
+                                }
+                                else if(cat==5)
+                                {
+                                    System.out.println("You have selected Gourmeet");
+                                }
+                                else if(cat==5)
+                                {
+                                    System.out.println("You have selected Dulex Veggie");
+                                }
+                                break;
+                            }
+                            break;
+                        }
+                        break;
+
+                        case 2:
+
+                        while(true)
+                        {   try
+                            {
+                                System.out.println("------------------------------------");
+                                System.out.println("    You Have Selected NonVeg ");
+                                System.out.println("------------------------------------");
+                                System.out.println("1.CHEESEBURST PIZZA  2.Classic Hand Tossed");
+                                choice_1=Integer.parseInt(br.readLine());
+                            }
+                            catch(Exception ex)
+                            {
+                                System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                br.readLine();
+                                continue;
+                            } 
+                            if(choice_1==1||choice_1==2  )
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                br.readLine();
+                            }
+                        }
+                        switch(choice_1)
+                        {
+                            case 1:
+
+                            while(true)
+                            {   try
+                                {
+                                    System.out.println("\f");
+                                    System.out.println("          /-------------------------------------\\");
+                                    System.out.println("          |              CheeseBurst              |");
+                                    System.out.println("          |                Pizza                  |");
+                                    System.out.println("          |---------------------------------------|");
+                                    System.out.println("          |Category           Small  Medium  Large|");
+                                    System.out.println("          |1. (NonVeg Treat)   190    250     350 |");
+                                    System.out.println("          |1.Spicy Chicken                        |");
+                                    System.out.println("          |2.Chicken Barbeque                     |          ");
+                                    System.out.println("          |3.Chicken Feista                       |        ");
+                                    System.out.println("          |4.Chicken Delight                      |      ");
+                                    System.out.println("          |---------------------------------------|");
+                                    System.out.println("          |2.(NonVeg Special)  150    250     310 |           ");
+                                    System.out.println("          |5.Khema Do Pyaza                       |");
+                                    System.out.println("          |6.Zesty Chicken                        | ");
+                                    System.out.println("          |7.Non Veg Supreme                      |  ");
+                                    System.out.println("          \\-------------------------------------/");
+                                    System.out.println("\n Select pizza category \n 1.NonVeg Treat 2.NonVeg Special");
+                                    pizz=Integer.parseInt(br.readLine());
+                                }
+                                catch(Exception ex)
+                                {
+                                    System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                    continue;
+                                } 
+                                if(pizz==1||pizz==2 )
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                }
+                            }
+                            switch (pizz)
+                            {
+                                case 1:
+                                System.out.println("      Y O U    H A V E   S E L E C T E D");
+                                System.out.println("        N O N  V E G     T R E A T  ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("Now Select Pizza in this category");
+                                        ncat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(ncat==1||ncat==2|| ncat==3||ncat==4 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(ncat==1)
+                                {
+                                    System.out.println("You have selected Spicy Chicken");
+                                }
+                                else if(ncat==2)
+                                {
+                                    System.out.println("You have selected  Chicken Barbeque");
+                                }
+                                else if(ncat==3)
+                                {
+                                    System.out.println("You have selected Chicken Feista");
+                                }
+                                else if(ncat==4)
+                                {
+                                    System.out.println("You have selected Chicken Delight");
+                                }
+                                break;
+                                case 2:
+                                System.out.println("      Y O U    H A V E   S E L E C T E D");
+                                System.out.println("       N O N   V E G  S P E I C A L");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("Now Select Pizza in this category");
+                                        ncat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(ncat==5||ncat==6|| ncat==7 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(ncat==5)
+                                {
+                                    System.out.println("You have selected Khema Do Pyaza");
+                                }
+                                else if(ncat==5)
+                                {
+                                    System.out.println("You have selected Zesty Chicken");
+                                }
+                                else if(ncat==5)
+                                {
+                                    System.out.println("You have selected Non Veg Supreme");
+                                }
+                                break;
+                            }
+                            break;
+                            case 2:
+                            while(true)
+                            {   try
+                                {
+                                    System.out.println("\f");
+                                    System.out.println("             /-------------------------------------\\");
+                                    System.out.println("             |              Classic Hand Tossed      |");
+                                    System.out.println("             |                Pizza                  |");
+                                    System.out.println("             |---------------------------------------|");
+                                    System.out.println("             |Category           Small  Medium  Large|");
+                                    System.out.println("             |1. (NonVeg Treat)   190    250     350 |");
+                                    System.out.println("             |1.Spicy Chicken                        |");
+                                    System.out.println("             |2.Chicken Barbeque                     |          ");
+                                    System.out.println("             |3.Chicken Feista                       |        ");
+                                    System.out.println("             |4.Chicken Delight                      |      ");
+                                    System.out.println("             |---------------------------------------|");
+                                    System.out.println("             |2.(NonVeg Special)  150    250     310 |           ");
+                                    System.out.println("             |5.Khema Do Pyaza                       |");
+                                    System.out.println("             |6.Zesty Chicken                        | ");
+                                    System.out.println("             |7.Non Veg Supreme                      |  ");
+                                    System.out.println("             \\--------------------------------------/");
+                                    System.out.println("\n Select pizza category \n 1.NonVeg Treat 2.NonVeg Special");
+                                    pizz=Integer.parseInt(br.readLine());
+                                }
+                                catch(Exception ex)
+                                {
+                                    System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                    continue;
+                                } 
+                                if(pizz==1||pizz==2 )
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                    br.readLine();
+                                }
+                            }
+                            switch (pizz)
+                            {
+                                case 1:
+                                System.out.println("      Y O U    H A V E   S E L E C T E D");
+                                System.out.println("          N O N   V E G   T R E A T  ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("\n");
+                                        System.out.println("Now Select Pizza in this category");
+                                        ncat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(ncat==1||ncat==2|| ncat==3||ncat==4 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(ncat==1)
+                                {
+                                    System.out.println("You have selected Spicy Chicken");
+                                }
+                                else if(ncat==2)
+                                {
+                                    System.out.println("You have selected  Chicken Barbeque");
+                                }
+                                else if(ncat==3)
+                                {
+                                    System.out.println("You have selected Chicken Feista");
+                                }
+                                else if(ncat==4)
+                                {
+                                    System.out.println("You have selected Chicken Delight");
+                                }
+                                break;
+                                case 2:
+                                System.out.println("      Y O U    H A V E   S E L E C T E D");
+                                System.out.println("         N O N  V E G     S P E C I A L ");
+                                while(true)
+                                {   try
+                                    {
+                                        System.out.println("\n");
+                                        System.out.println("Now Select Pizza in this category");
+                                        cat=Integer.parseInt(br.readLine());
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                        continue;
+                                    } 
+                                    if(ncat==5||ncat==6|| ncat==7 )
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                                        br.readLine();
+                                    }
+                                }
+                                if(ncat==5)
+                                {
+                                    System.out.println("You have selected Khema Do Pyaza");
+                                }
+                                else if(ncat==5)
+                                {
+                                    System.out.println("You have selected Zesty Chicken");
+                                }
+                                else if(ncat==5)
+                                {
+                                    System.out.println("You have selected Non Veg Supreme");
+                                }
+                                break;
+                            }
+                            break;
+                        }
+                        break;
+                    }
+
+                    case 2: 
+                    while(true)
+                    {   try
+                        {
+                            System.out.println("\f");
+                            System.out.println("PRESS ONE TO ORDER AGAIN");
+                            cont=Integer.parseInt(br.readLine());
+                        }
+                        catch(Exception ex)
+                        {
+                            System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                            continue;
+                        } 
+                        if(cont==1)
+                        {
+                            b++;
+                            System.out.println("\f");
+                            break;
+                        }
+                        else
+                        {
+                            System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                        }
+                    }
+                }
+                break;
+                case 2:
+                System.out.println("\f");
+                System.out.println("         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                System.out.println("         @        YOU HAVE SELECTED SIDES        @");
+                System.out.println("         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                while(true)
+                {
+                    try
+                    {
+                        System.out.println("          SIDES         ");
+                        System.out.println(" Do you want any Sides??");
+                        System.out.println("     1.YES   2.NO");  
+                        yes=Integer.parseInt(br.readLine());
+                    }
+                    catch(Exception ex)
+                    {
+                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                        continue;
+                    } 
+                    if(yes==1||yes==2 )
+                    { 
+                        break;
+                    }
+                    else
+                    {
+                        System.out.println("you have not followed the instruction enter correct no. PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                    }
+                }
+                if(yes==1)
+                {
+                    while(true)
+                    {
+                        try
+                        {
+                            System.out.println("\f");
+                            System.out.println("             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                            System.out.println("             @    Options                          Cost        @");
+                            System.out.println("             @ 1.Chicken Kickers                    79         @");
+                            System.out.println("             @ 2.Garlic Spicy Bread                 99         @");
+                            System.out.println("             @ 3.Lebanise Roll                      110        @");
+                            System.out.println("             @ 4.Italian Pasta                      105        @");
+                            System.out.println("             @ 5.Taco IndiaNA                       139        @");
+                            System.out.println("             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                            System.out.println("");
+                            sid=Integer.parseInt(br.readLine());
+                        }
+                        catch(Exception ex)
+                        {
+                            System.out.println("only numbers allowed\n PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                            continue;
+                        } 
+                        if(sid==1||sid==2 || sid==3 ||sid==4 || sid==5 )
+                        { 
+                            break;
+                        }
+                        else
+                        {
+                            System.out.println("you have not followed the instruction enter correct no.\n PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                        }
+                    }
+                }
+                break;
+                case 3:
+                System.out.println("\f");
+                System.out.println("                  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                System.out.println("                  $       YOU HAVE SELECTED     $ ");
+                System.out.println("                  $       Desserts & Drinks     $");
+                System.out.println("                  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                while(true)
+                {
+                    try
+                    {
+
+                        System.out.println("               DESSERTS           ");
+                        System.out.println("  Would you like to have Desserts&Drinks");
+                        System.out.println("            1.YES   2.NO");
+                        no=Integer.parseInt(br.readLine());
+                    }
+                    catch(Exception ex)
+                    {
+                        System.out.println("only numbers allowed\n PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                        continue;
+                    } 
+                    if(no==1||no==2 )
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        System.out.println("you have not followed the instruction enter correct no.\n PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                    }
+                }
+                if(no==1)
+                {
+                    while(true)
+                    {
+                        try
+                        {
+                            System.out.println("\f");
+                            System.out.println("                @@@@@@@@@@@@@@@@@@@@@=DESSERTS=@@@@@@@@@@@@@@@@@@@@@");
+                            System.out.println("                @                     &DRINKS                      @");      
+                            System.out.println("                @     Options                              Cost    @");
+                            System.out.println("                @ 1.Choco Lava cake                         65     @");
+                            System.out.println("                @ 2.Butterscoth                             85     @");
+                            System.out.println("                @ 3.Nutty Choco Lava Cake                   70     @");
+                            System.out.println("                @ 4.Coke Can                                35     @");
+                            System.out.println("                @ 5.Ice Tea                                 40     @");
+                            System.out.println("                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                            System.out.println(""); 
+                            dri=Integer.parseInt(br.readLine());   
+                        }
+                        catch(Exception ex)
+                        {
+                            System.out.println("only numbers allowed\n PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                            continue;
+                        } 
+                        if(dri==1||dri==2||dri==3||dri==4||dri==5 )
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            System.out.println("you have not followed the instruction enter correct no.\n PRESS ENTER KEY TO OPT AGAIN");
+                            br.readLine();
+                        }
+
+                    }
+
+                }
+
+                while(true)
+                {   try
+                    {
+                        System.out.println("\f");
+                        System.out.println("PRESS ONE TO ORDER AGAIN OR TWO FOR THE BILL");
+                        cont=Integer.parseInt(br.readLine());
+                    }
+                    catch(Exception ex)
+                    {
+                        System.out.println("only numbers allowed  PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                        continue;
+                    } 
+                    if(cont==1)
+                    {
+                        b++;
+                        System.out.println("\f");
+                        break;
+                    }
+                    else if(cont==2)
+                    {
+
+                    }
+                    else
+                    {
+                        System.out.println("you have not followed the instruction enter correct number.PRESS ENTER KEY TO OPT AGAIN");
+                        br.readLine();
+                    }
+                }
+            }
+        }
+    }
+
+    public static void main(String args[]) throws IOException
+    {
+        Dominos ob=new Dominos();
+        
+        ob.input();
+
+        ob.display();
+
+    }
+}
+

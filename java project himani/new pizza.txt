@@ -1,0 +1,78 @@
+
+import java.io.*;
+public class pizza
+{
+    public static void main(String args[]) throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader (System.in));
+
+        int e=0;
+        System.out.println("                    Welcome To Pizza Paradise " );
+        while(true)
+        {
+            try
+            {
+                System.out.println("Here You Have Options To Select Your Pizza Store \nPress The Number AlongSide Your Pizza Store \n 1.PIZZA HUT \n 2.DOMINOS \n 3.SMOKIN JONES" );
+                e=Integer.parseInt(br.readLine());
+            }
+            catch(Exception ex)
+            {
+                System.out.println("only numbers allowed");
+                br.readLine();
+                continue;
+            } 
+            if(e==1||e==2 || e==3 )
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("you have not followed the instruction enter correct no.");
+                br.readLine();
+            }
+
+        }
+        System.out.println("Thanks For Selecting");
+
+        if(e==1)
+        {
+            System.out.println("\f");
+            System.out.println("***************WELCOME TO PIZZA HUT!!***********************");
+            System.out.println(".----------------.  .----------------.  .----------------. ");
+            System.out.println("| .--------------. || .--------------. || .--------------. |");
+            System.out.println("| |   ______     | || |  ____  ____  | || |  ________    | |");
+            System.out.println("| |  |_   __ \\  | || | |_   ||   _| | || | |_   ___ `.  | |");
+            System.out.println("| |    | |__) |  | || |   | |__| |   | || |   | |   `.\\ | |");
+            System.out.println("| |    |  ___/   | || |   |  __  |   | || |   | |    | | | |");
+            System.out.println("| |   _| |_      | || |  _| |  | |_  | || |  _| |___.' / | |");
+            System.out.println("| |  |_____|     | || | |____||____| | || | |________.'  | |");
+            System.out.println("| |   PIZZA      | || |     HUT      | || |   DELIVERY   | |");
+            System.out.println("| '--------------' || '--------------' || '--------------' |");
+            System.out.println(" '----------------'  '----------------'  '----------------' ");
+            System.out.println("********************hot.dot.promise*************************");
+            for(long de=1;de<=100000000;de++)
+            {}
+
+            load lo=new load();
+            lo.lod();
+        }
+        else if(e==2)
+        {
+            System.out.println("WELCOME TO DOMINOS!!");
+            logo obj=new logo();
+            obj.display();
+        }
+        else if(e==3)
+        {
+            System.out.println("WELCOME TO SMOKIN JONES!!");
+        }
+        switch(e)
+        {
+            case 1:
+            pizzahut1 p=new pizzahut1();
+            p.cal();
+            break;
+            
+
+            
+        }}}

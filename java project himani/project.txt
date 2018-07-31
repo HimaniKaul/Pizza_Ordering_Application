@@ -1,0 +1,117 @@
+import java.io.*;
+public class Index
+{
+    String custName[]=new String[500];
+    long custMobile[]=new long[500];
+    static String veg[]={"Simply Veg","Veggie Crunch","Country Feast","Exotica","Double Cheese"};
+    static int veg_price[]={100, 150,200,250,300};
+    static String nonVeg[]={"Zesty Chicken","Chicken Supreme","Chick N'Spicy","Chicken Fiery Ride","Kadai Chicken"};
+    static int nonveg_price[]={200,250,300,350,400};
+    public static void main (String args[]) throws IOException
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        br.readLine();
+        int user;
+        do
+        {
+            try
+            {
+                System.out.println("\f   1. new inquiry");
+                System.out.println("     2. List of customers");
+                user=Integer.parseInt(br.readLine());
+
+            }
+            catch(Exception e)
+            {
+                System.out.println("only numbers allowed");
+                br.readLine();
+                continue;
+            } 
+            if(user==1||user==2)
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("you have not followed the instruction enter correct no.");
+                br.readLine();
+            }
+
+        }while(true);
+        int user_cat=0;
+        do
+        {
+            try
+            {
+
+                System.out.println("\f1. Veg");
+                System.out.println("2. Non-Veg");
+                user_cat=Integer.parseInt(br.readLine());
+
+            }
+            catch(Exception e)
+            {
+                System.out.println("Follow the instructions");
+                br.readLine();
+            }
+            if(user_cat==1||user_cat==2)
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("please input the correct value");
+                continue;
+            }
+        }
+        while(true);
+        switch(user_cat)
+        {
+            case 1:
+            veg();
+            break;
+            case 2:
+            nonVeg();
+            break;   
+        }
+    }
+
+    public static void veg()
+    {
+        int j=1;
+        for(int i=0;i<veg.length;i++)
+        {
+            System.out.print(j+". "+veg[i]);
+            for(int w=1;w<30-veg[i].length();w++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(veg_price[i]);
+            j++;
+        }
+    }
+
+    public static void nonVeg()
+    {
+        int j=1;
+        for(int i=0;i<nonVeg.length;i++)
+        {
+            System.out.print(j+". "+nonVeg[i]);
+            for(int w=1;w<30-nonVeg[i].length();w++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(nonveg_price[i]);
+            j++;
+        }
+    }
+
+    public static void lines()
+    {
+        for(int i=0;i<=20;i++)
+        {
+            System.out.println();
+        }
+    }
+}
